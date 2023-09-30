@@ -1,7 +1,7 @@
-#include "FelixVectorGenerator.hpp"
+#include "libFelix.hpp"
 
 
-std::vector<int> FelixVectorGenerator::getUniformVec(std::size_t N, int lower, int upper){
+std::vector<int> Felix::VectorGenerator::getUniformVec(std::size_t N, int lower, int upper){
     unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
     std::mt19937 generator( seed );  // mt19937 is a standard mersenne_twister_engine
     // http://www.cplusplus.com/reference/random/uniform_int_distribution/
@@ -12,7 +12,7 @@ std::vector<int> FelixVectorGenerator::getUniformVec(std::size_t N, int lower, i
 
     return V;
 }
-std::vector<float> FelixVectorGenerator::getUniformVec(std::size_t N, double lower, double upper){
+std::vector<float> Felix::VectorGenerator::getUniformVec(std::size_t N, double lower, double upper){
     unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
     std::mt19937 generator( seed );  // mt19937 is a standard mersenne_twister_engine
     // http://www.cplusplus.com/reference/random/uniform_int_distribution/
